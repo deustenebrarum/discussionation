@@ -5,6 +5,7 @@
 Windows:
 1. `scripts/initialize.bat`
 2. `venv/Scripts/activate`
+
 Linux:
 1. `source scripts/initialize.sh`
 2. `source venv/bin/activate`
