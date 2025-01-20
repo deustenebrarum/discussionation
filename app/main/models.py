@@ -53,7 +53,12 @@ class Post(models.Model):
         null=True, verbose_name='тема'
     )
     user = models.ForeignKey(
-        User, on_delete=models.CASCADE, null=False, verbose_name='пользователь')
+        User, on_delete=models.CASCADE, null=False,
+        verbose_name='пользователь'
+    )
+    title = models.CharField(
+        max_length=100, blank=False, verbose_name='название'
+    )
     content = models.TextField(blank=False, verbose_name='содержание')
     application = models.ForeignKey(
         Application, on_delete=models.SET_NULL, null=True, verbose_name='приложение'
