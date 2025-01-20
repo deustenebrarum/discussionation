@@ -12,7 +12,6 @@ router.register(r'comments', CommentViewSet, basename='comment')
 router.register(r'applications', ApplicationViewSet, basename='application')
 
 urlpatterns = router.urls + [
-    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('auth/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('auth/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
-# pip install djangorestframework-simplejwt
